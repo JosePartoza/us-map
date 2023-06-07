@@ -1,7 +1,7 @@
-const paths = document.querySelectorAll("svg path[data-name]");
+const paths = document.querySelectorAll("svg path[id]");
 
 paths.forEach((path) => {
-  const stateName = path.getAttribute("data-name");
+  const stateName = path.getAttribute("id");
   const textElement = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "text"
