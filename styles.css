@@ -11,7 +11,97 @@ svg path {
   stroke-width: 0.25;
 }
 svg path:hover {
-  fill: #00ff37;
+  fill: #00eeff;
   transition: 0.6s;
   cursor: pointer;
+}
+svg path[data-name="Alaska"]:hover,
+svg path[data-name="New York"]:hover,
+svg path[data-name="New Hampshire"]:hover,
+svg path[data-name="Georgia"]:hover,
+svg path[data-name="Maine"]:hover,
+svg path[data-name="Pennsylvania"]:hover,
+svg path[data-name="Indiana"]:hover,
+svg path[data-name="Montana"]:hover,
+svg path[data-name="Nebraska"]:hover,
+svg path[data-name="Wyoming"]:hover,
+svg path[data-name="Nevada"]:hover,
+svg path[data-name="Wisconsin"]:hover,
+svg path[data-name="Alabama"]:hover,
+svg path[data-name="California"]:hover {
+  fill: red;
+  transition: 0.6s;
+  cursor: pointer;
+}
+svg path[data-name="Texas"]:hover,
+svg path[data-name="Florida"]:hover,
+svg path[data-name="Washington"]:hover,
+svg path[data-name="West Virginia"]:hover,
+svg path[data-name="Ohio"]:hover,
+svg path[data-name="Arkansas"]:hover,
+svg path[data-name="Iowa"]:hover,
+svg path[data-name="North Carolina"]:hover,
+svg path[data-name="South Dakota"]:hover,
+svg path[data-name="Illinois"]:hover,
+svg path[data-name="Minnesota"]:hover,
+svg path[data-name="Utah"]:hover,
+svg path[data-name="Colorado"]:hover {
+  fill: rgb(0, 255, 30);
+  transition: 0.6s;
+  cursor: pointer;
+}
+svg path::after {
+  content: attr(data-name);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-anchor: middle;
+  pointer-events: none;
+}
+svg text {
+  fill: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  pointer-events: none;
+}
+.legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: rgb(0, 255, 30);
+}
+
+.blue {
+  background-color: #00eeff;
+}
+
+.legend-text {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
 }
